@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Methods {
 
-    static Person scanNewPerson() {
+    static Person scanNewPerson() throws NameUndefinedException, IncorrectAgeException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Wprowadź dane nowej osoby: \nImię, nazwisko, wiek, pesel");
         String fn = scanner.nextLine();
