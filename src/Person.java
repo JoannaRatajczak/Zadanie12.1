@@ -15,13 +15,15 @@ public class Person {
                 '}';
     }
 
-    public Person() {
-    }
+    public Person() {}
 
-    public Person(String firstName, String lastName, int age, int pesel) {
+    public Person(String firstName, String lastName, int age, int pesel) throws NameUndefinedException, IncorrectAgeException {
         this.firstName = firstName;
+        if (firstName.length() < 2 || firstName == null) throw new NameUndefinedException("Wrong input");
         this.lastName = lastName;
+        if (lastName.length() < 2 || lastName == null) throw new NameUndefinedException("Wrong input");
         this.age = age;
+        if (age < 0) throw new IncorrectAgeException("Wrong input");
         this.pesel = pesel;
     }
 
