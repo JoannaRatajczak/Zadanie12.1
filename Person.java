@@ -15,10 +15,9 @@ public class Person {
                 '}';
     }
 
-    public Person() {
-    }
 
     public Person(String firstName, String lastName, int age, int pesel) throws NameUndefinedException, IncorrectAgeException {
+
         setFirstName(firstName);
         setLastName(lastName);
         setAge(age);
